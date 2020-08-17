@@ -4,6 +4,7 @@
     <artifactId>spring-boot-dependencies-for-caching</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
+
       <distributionManagement>
     <snapshotRepository>
       <id>cloud-artifacts</id>
@@ -27,16 +28,6 @@
       </snapshots>
     </repository>
   </repositories>
-
-  <build>
-    <extensions>
-      <extension>
-        <groupId>com.google.cloud.artifactregistry</groupId>
-        <artifactId>artifactregistry-maven-wagon</artifactId>
-        <version>2.1.0</version>
-      </extension>
-    </extensions>
-  </build>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -4179,6 +4170,14 @@
         </dependency>
     </dependencies>
     <build>
+<extensions>
+      <extension>
+        <groupId>com.google.cloud.artifactregistry</groupId>
+        <artifactId>artifactregistry-maven-wagon</artifactId>
+        <version>2.1.0</version>
+      </extension>
+    </extensions>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.johnzon</groupId>
